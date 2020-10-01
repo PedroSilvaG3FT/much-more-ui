@@ -1,0 +1,49 @@
+@import '../variables.scss';
+
+.header-container {
+    padding-left:  $padding-horizontal-header;
+    padding-right: $padding-horizontal-header;
+    height: $header-height;
+    background: $bg-mult-color;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    .header-content {
+        height: $header-height;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left:  8px;
+        padding-right: 8px;
+        
+        .logo-header {
+            max-width: 45px;
+            margin-right: 5px;
+        }
+        
+        #routes-area {
+            margin-left: auto;
+
+            a {
+                color: white;
+                margin-right: 48px;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .header-container {
+        width: 100%;
+        padding: 0%;
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between !important;
+        }
+    }
+}

@@ -1,0 +1,13 @@
+<div class="header-container">
+    <div class="header-content">
+
+        <img src="assets/images/logo.svg" class="logo-header">
+        
+        <div id="routes-area">
+            <a *ngFor="let route of routesMenu" [routerLink]="[route.link]">
+                {{route.name}}
+            </a>
+        </div>
+    </div>
+</div>
+
