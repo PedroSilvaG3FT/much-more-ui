@@ -1,1 +1,16 @@
-<p>home works!</p>
+<div class="container home-container">
+	<div class="home-content">
+
+		<div class="box-text">
+			<p>We are <b>Square</b></p>
+			<p>And we are <b>Coming Soon</b></p>
+		</div>
+
+		<div class="box-timer">
+			<div class="item-timer" *ngFor="let item of timer">
+				<p>{{item.value}}</p>
+				<p id="label-item-timer">{{item.label}}</p>
+			</div>
+		</div>
+	</div>
+</div>

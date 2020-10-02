@@ -1,0 +1,49 @@
+@import "../../layout/variables.scss";
+
+.home-container {
+	background: $color-primary;
+	padding-left: $padding-horizontal;
+	padding-right: $padding-horizontal;
+	height: calc(100vh - #{$header-height});
+
+	.home-content {
+		display: flex;
+		align-items: center;
+    justify-content: center;
+    flex-direction: column;
+		height: 62vh;
+
+		.box-text {
+      text-align: center;
+      margin-bottom: 10%;
+
+			p {
+				color: white;
+				font-size: 40px;
+        line-height: 1px;
+        text-transform: uppercase;
+			}
+    }
+    
+    .box-timer {
+      display: flex;
+      flex-direction: row;
+
+      .item-timer {
+        width: 75px;
+        margin: 10px;
+        text-align: center;
+
+        p {
+				  color: white;
+				  font-size: 20px;
+          line-height: 1px;
+        }
+        
+        #label-item-timer {
+          font-size: 14px;
+        }
+      }
+    }
+	}
+}

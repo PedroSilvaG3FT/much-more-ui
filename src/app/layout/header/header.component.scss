@@ -1,10 +1,10 @@
 @import '../variables.scss';
 
 .header-container {
-    padding-left:  $padding-horizontal-header;
-    padding-right: $padding-horizontal-header;
+    padding-left:  $padding-horizontal;
+    padding-right: $padding-horizontal;
     height: $header-height;
-    background: $bg-mult-color;
+    background: $bg-header;
     position: fixed;
     top: 0;
     left: 0;
