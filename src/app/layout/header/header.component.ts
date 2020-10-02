@@ -7,26 +7,24 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 
 export class HeaderComponent implements OnInit {
-  public showMenuMobile = false;
-
   public routesMenu = [
     { name: 'About Us', link: '/about' },
     { name: 'Contact Us', link: '/contact' },
   ];
 
-  @HostListener('window:resize', ['$event'])
-  onResize(): void {
-    if (window.innerWidth > 768 && this.showMenuMobile) {
-      this.showMenuMobile = false;
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll(e): void {
+    const element = document.querySelector('.header-container');
+
+    if (window.pageYOffset > 11) {
+      element.classList.add('header-style');
+    } else {
+      element.classList.remove('header-style');
     }
   }
 
   constructor() { }
 
   ngOnInit(): void { }
-
-  onCloseSideMenu(event): void {
-    this.showMenuMobile = event;
-  }
 
 }

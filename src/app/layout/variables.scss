@@ -10,3 +10,4 @@ $color-primary: #F03F38;
 $color-secondary: #38393D;
 
 $bg-mult-color: linear-gradient(to right,  $color-primary 0%, $color-primary 50%,$color-secondary 50%,$color-secondary 100%);
+$bg-mult-color-horizontal: linear-gradient(134deg, $color-primary 60%, $color-secondary 60%);

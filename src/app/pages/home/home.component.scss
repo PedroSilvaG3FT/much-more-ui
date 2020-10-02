@@ -1,5 +1,7 @@
 @import "../../layout/variables.scss";
 
+$square-size: 225px;
+
 .home-container {
 	background: $color-primary;
 	padding-left: $padding-horizontal;
@@ -21,19 +23,19 @@
 
 			.text-principal {
 				color: white;
-				font-size: 40px;
+				font-size: 4rem;
 				line-height: 1px;
-        text-transform: uppercase;
-        white-space: nowrap;
+				text-transform: uppercase;
+				white-space: nowrap;
 			}
 
 			.border {
-				height: 225px;
-				width: 225px;
+				height: $square-size;
+				width: $square-size;
 				border: 3px solid #ffffff66;
 				position: relative;
 
-				.text {
+				.text-content {
 					width: 550px;
 					position: absolute;
 					text-align: center;
@@ -59,12 +61,12 @@
 
 				p {
 					color: white;
-					font-size: 20px;
+					font-size: 2rem;
 					line-height: 1px;
 				}
 
 				#label-item-timer {
-					font-size: 14px;
+					font-size: 1rem;
 				}
 			}
 		}
@@ -78,7 +80,7 @@
 				position: initial;
 
 				.text-principal {
-					font-size: 22px;
+					font-size: 2.2rem;
 				}
 				.border {
 					display: none;

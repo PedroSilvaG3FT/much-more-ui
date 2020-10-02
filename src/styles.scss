@@ -1,22 +1,72 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-@import './app/layout/variables.scss';
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+@import "./app/layout/variables.scss";
 
 * {
-  font-family: 'Roboto', sans-serif;
+	font-family: "Roboto", sans-serif;
+}
+
+html {
+	font-size: 62.5%;
 }
 
 html,
 body,
 #root {
-  height: 100%;
+	height: 100vh;
 }
 
 body {
-  background: white;
-  margin: 0;
+	background: white;
+	margin: 0;
+	height: 100vh;
 }
 
 .container {
-    padding-top: $header-height;
-    width: auto;
+	padding-top: $header-height;
+}
+
+.form-group {
+	margin-bottom: 1rem;
+
+	label {
+		display: inline-block;
+		margin-bottom: 0.5rem;
+	}
+
+	.form-control {
+		width: 100%;
+		padding: 8px;
+		border: none;
+		border-bottom: 1px solid $color-primary;
+		box-sizing: border-box;
+		resize: vertical;
+	}
+}
+
+.btn {
+	padding: 8px 12px;
+	border: none;
+	cursor: pointer;
+}
+
+.btn-primary {
+	background-color: white;
+  color: $color-primary;
+  border: 1px solid $color-primary;
+}
+
+.btn-primary:hover {
+	background: darken($color: $color-primary, $amount: 10);
+	color: white;
+}
+
+button:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+	html {
+		font-size: 45%;
+	}
 }

@@ -1,0 +1,68 @@
+@import "../../layout/variables.scss";
+
+.contact-container {
+	background: $bg-mult-color;
+	padding-left: $padding-horizontal;
+	padding-right: $padding-horizontal;
+	height: calc(100vh - #{$header-height});
+
+	.separator {
+		border-top: 0.6px solid white;
+		width: 60px;
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+
+	.contact-content {
+		display: grid;
+        grid-template-columns: 25% 70%;
+        grid-auto-rows: minmax(min-content, max-content);
+		grid-gap: 32px;
+
+		.box-info {
+			color: white;
+			font-size: 1.5rem;
+
+			.title {
+				text-transform: uppercase;
+				font-size: 2.5rem;
+				padding: 0px;
+			}
+
+			.social {
+				display: inline;
+
+				img {
+					width: 26px;
+					margin-right: 12px;
+				}
+			}
+		}
+
+		.box-form {
+			background: white;
+			box-shadow: 0px 0px 31px -7px rgba(0, 0, 0, 1);
+
+			form {
+				padding: 30px;
+
+				textarea {
+					resize: none;
+				} 
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	.contact-container {
+		background: $bg-mult-color-horizontal;
+		.contact-content {
+			display: grid !important;
+            grid-template-rows: 40% 50%;
+            grid-template-columns: none;
+            grid-gap: 40px;
+            align-items: center;
+		}
+	}
+}
