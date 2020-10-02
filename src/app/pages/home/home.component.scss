@@ -4,7 +4,7 @@
 	background: $color-primary;
 	padding-left: $padding-horizontal;
 	padding-right: $padding-horizontal;
-	height: calc(100vh - #{$header-height});
+	height: 100vh;
 
 	.home-content {
 		display: flex;
@@ -19,6 +19,14 @@
 			position: relative;
 			left: 135px;
 
+			.text-principal {
+				color: white;
+				font-size: 40px;
+				line-height: 1px;
+        text-transform: uppercase;
+        white-space: nowrap;
+			}
+
 			.border {
 				height: 225px;
 				width: 225px;
@@ -32,14 +40,11 @@
 					top: 21%;
 					background-color: $color-primary;
 					left: -145%;
-
-					p {
-						color: white;
-						font-size: 40px;
-						line-height: 1px;
-						text-transform: uppercase;
-					}
 				}
+			}
+
+			#text-mobile {
+				display: none;
 			}
 		}
 
@@ -60,6 +65,27 @@
 
 				#label-item-timer {
 					font-size: 14px;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 591px) {
+	.home-container {
+		.home-content {
+			.box-text {
+				position: initial;
+
+				.text-principal {
+					font-size: 22px;
+				}
+				.border {
+					display: none;
+				}
+
+				#text-mobile {
+					display: initial;
 				}
 			}
 		}
