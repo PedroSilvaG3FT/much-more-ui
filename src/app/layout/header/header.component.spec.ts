@@ -9,10 +9,10 @@ describe('HeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HeaderComponent ],
+      declarations: [HeaderComponent],
       imports: [RouterTestingModule],
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -23,5 +23,21 @@ describe('HeaderComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should hide home option if url is /', () => {
+    component.validateURL('/');
+    fixture.detectChanges();
+
+    const urlHomeInfo = component.routesMenu[0];
+    expect(urlHomeInfo.show).toEqual(false);
+  });
+
+  it('should show home option if url is /contact', () => {
+    component.validateURL('/contact');
+    fixture.detectChanges();
+
+    const urlHomeInfo = component.routesMenu[0];
+    expect(urlHomeInfo.show).toEqual(true);
   });
 });
