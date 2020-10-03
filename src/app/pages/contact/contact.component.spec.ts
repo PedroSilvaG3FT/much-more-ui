@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ContactInterface } from 'src/app/interfaces/contact';
 
 import { ContactComponent } from './contact.component';
 
@@ -28,5 +29,11 @@ describe('ContactComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should clear form on send contact', () => {
+    component.sendContact();
+    fixture.detectChanges();
+    expect(component.contact).toEqual({} as ContactInterface);
   });
 });

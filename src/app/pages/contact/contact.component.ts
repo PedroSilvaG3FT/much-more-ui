@@ -15,6 +15,7 @@ export class ContactComponent implements OnInit {
   ngOnInit(): void { }
 
   sendContact(): void {
+    this.contact = {} as ContactInterface;
     console.log('contact :', this.contact);
   }
 }
