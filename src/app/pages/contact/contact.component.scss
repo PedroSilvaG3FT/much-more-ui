@@ -60,6 +60,9 @@
 @media only screen and (max-width: 768px) {
 	.contact-container {
 		background: $bg-mult-color-horizontal;
+		padding-top: calc(#{$header-height} + 30px);
+		height: 110vh;
+
 		.contact-content {
 			display: grid !important;
             grid-template-rows: 40% 50%;
@@ -69,3 +72,12 @@
 		}
 	}
 }
+
+@media only screen and (max-width: 360px) {
+	.contact-container {
+		background: $bg-mult-color-horizontal;
+		padding-top: calc(#{$header-height} + 30px);
+		height: 110vh;
+	}
+}
+

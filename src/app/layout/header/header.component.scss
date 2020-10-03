@@ -43,6 +43,9 @@
 }
 
 @media only screen and (max-width: 768px) {
+    .bg-header {
+        background: $color-primary;
+    }
     .header-container {
         width: 100%;
         padding: 0%;
@@ -52,5 +55,11 @@
             align-items: center;
             justify-content: space-between !important;
         }
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .bg-header {
+        background: $color-primary;
     }
 }

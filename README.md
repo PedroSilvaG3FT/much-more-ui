@@ -28,7 +28,6 @@ Execute `ng generate component-name` para gerar um novo componente. Você també
 - `Maior que 768px`: Desktop
 - `Menor que 768px`: Tablet/Smartphones
 
-
 ## Rotas e Header
 - São adicionadas em header.component.ts por meio de um array e renderizada no template.
 - Em cada rota existe uma propriedade `show` do tipo boolean para definir no template se estará disponível para exibição.
@@ -58,6 +57,13 @@ Ex.:
         </div>
     </div>
 
+## Local Storage
+- Chave para acesso de contatos está presente como variável de ambiente em enviroment.ts (CONTACT_KEY);
+
+#### Sua camada de serviço contem as funções para :
+* `Buscar`: Espera como parametro uma Key.
+* `Adicionar`: Espera como parametro uma Key + valor (String).
+* `Limpar`: não possui parametros.
 
 ## Considerações gerais
 - Desenvolver um código limpo.
