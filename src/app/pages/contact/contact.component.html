@@ -19,41 +19,65 @@
 			<p><b>Email:</b> pedro.silva-dev@hotmail.com</p>
 
 			<div class="social">
-				<a href="https://www.linkedin.com/in/pedro-silva-65996a181" target="_blank">
+				<a
+					href="https://www.linkedin.com/in/pedro-silva-65996a181"
+					target="_blank"
+				>
 					<img src="assets/icon/facebook.svg" alt="facebook" />
 				</a>
 				<a href="https://www.google.com/">
-					<img src="assets/icon/google.svg" alt="google" target="_blank"/>
+					<img
+						src="assets/icon/google.svg"
+						alt="google"
+						target="_blank"
+					/>
 				</a>
-				<a href="https://www.linkedin.com/in/pedro-silva-65996a181" target="_blank">
+				<a
+					href="https://www.linkedin.com/in/pedro-silva-65996a181"
+					target="_blank"
+				>
 					<img src="assets/icon/linkedin.svg" alt="linkedin" />
 				</a>
 				<a href="https://twitter.com/login?lang=pt">
-					<img src="assets/icon/twitter.svg" alt="twitter" target="_blank"/>
+					<img
+						src="assets/icon/twitter.svg"
+						alt="twitter"
+						target="_blank"
+					/>
 				</a>
 			</div>
 		</div>
 
 		<div class="box-form">
-			<form>
+			<form #contactForm="ngForm" (ngSubmit)="sendContact()">
 				<div class="form-group">
 					<input
 						type="text"
 						required
+						name="name"
 						class="form-control"
-						name="merchandiseName"
 						placeholder="Your Name"
+						[(ngModel)]="contact.name"
 					/>
 				</div>
 
 				<div class="form-group">
 					<input
 						type="text"
-						required
+						name="email"
+						#emailref="ngModel"
 						class="form-control"
-						name="merchandiseName"
 						placeholder="Your Email"
+						[pattern]="patternEmail"
+						[(ngModel)]="contact.email"
 					/>
+
+					<div class="form-control-error" *ngIf="emailref.errors && (emailref.touched || emailref.dirty)">
+						<div [hidden]="!emailref.errors?.pattern">
+							Email format is invalid 
+						</div>
+					</div>
+
 				</div>
 
 				<div class="form-group">
@@ -61,22 +85,28 @@
 						type="text"
 						required
 						class="form-control"
-						name="merchandiseName"
 						placeholder="Subject"
+						name="subject"
+						[(ngModel)]="contact.subject"
 					/>
 				</div>
 
 				<div class="form-group">
 					<textarea
+						rows="9"
+						required
+						name="message"
 						class="form-control"
-						rows="5"
-						placeholder="Your Message">
+						placeholder="Your Message"
+						[(ngModel)]="contact.message"
+					>
 					</textarea>
 				</div>
 
 				<input
 					type="submit"
 					class="btn btn-primary btn-submit"
+					[disabled]="!contactForm.form.valid"
 					value="Submit"
 				/>
 			</form>

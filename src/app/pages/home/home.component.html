@@ -1,20 +1,12 @@
 <div class="container home-container">
 	<div class="home-content">
-		<ng-template #textTemplate>
-			<p class="text-principal">We are <b>Square</b></p>
-			<p class="text-principal">And we are <b>Coming Soon</b></p>
-		</ng-template>
-
+		
 		<div class="box-text">
 			<div class="square">
 				<div class="text-content">
-					<ng-container *ngTemplateOutlet="textTemplate;">
-					</ng-container>
+					<p class="text-principal">We are <b>Square</b></p>
+					<p class="text-principal">And we are <b>Coming Soon</b></p>
 				</div>
-			</div>
-
-			<div id="text-mobile">
-				<ng-container *ngTemplateOutlet="textTemplate;"> </ng-container>
 			</div>
 		</div>
 

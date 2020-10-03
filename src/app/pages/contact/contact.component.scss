@@ -44,9 +44,10 @@
 		.box-form {
 			background: white;
 			box-shadow: 0px 0px 31px -7px rgba(0, 0, 0, 1);
-			display: grid;
 			form {
-				padding: 30px;
+				padding: 3rem;
+				padding-left:  5.5rem;
+				padding-right: 5.5rem;
 
 				textarea {
 					resize: none;
