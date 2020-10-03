@@ -6,7 +6,7 @@
 		</ng-template>
 
 		<div class="box-text">
-			<div class="border">
+			<div class="square">
 				<div class="text-content">
 					<ng-container *ngTemplateOutlet="textTemplate;">
 					</ng-container>
@@ -19,7 +19,7 @@
 		</div>
 
 		<div class="box-timer">
-			<div class="item-timer" *ngFor="let item of timer">
+			<div class="item-timer" *ngFor="let item of timerInfo">
 				<p>{{item.value}}</p>
 				<p id="label-item-timer">{{item.label}}</p>
 			</div>

@@ -1,12 +1,13 @@
 @import "../../layout/variables.scss";
 
 $square-size: 225px;
+$square-size-mobile: 125px;
 
 .home-container {
 	background: $color-primary;
 	padding-left: $padding-horizontal;
 	padding-right: $padding-horizontal;
-	height: 100vh;
+	height: calc(100vh - #{$header-height});
 
 	.home-content {
 		display: flex;
@@ -29,7 +30,7 @@ $square-size: 225px;
 				white-space: nowrap;
 			}
 
-			.border {
+			.square {
 				height: $square-size;
 				width: $square-size;
 				border: 3px solid #ffffff66;
@@ -82,12 +83,18 @@ $square-size: 225px;
 				.text-principal {
 					font-size: 2.2rem;
 				}
-				.border {
-					display: none;
-				}
+				.square {
+					height: $square-size-mobile;
+					width: $square-size-mobile;
 
-				#text-mobile {
-					display: initial;
+					.text-content {
+						width: auto;
+						position: absolute;
+						text-align: center;
+						top: 30%;
+						background-color: $color-primary;
+						left: -30%;
+					}
 				}
 			}
 		}
