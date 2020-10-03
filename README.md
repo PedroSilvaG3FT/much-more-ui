@@ -51,7 +51,7 @@ Ex.:
   para configurações especificas alterar o .scss correspondente ao componente.
 
 ### Modelo de estrutura de template 
-:
+
     <div class="container"> 
         <div class="content">
             CONTEUDO
