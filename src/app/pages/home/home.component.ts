@@ -9,9 +9,9 @@ import { map } from 'rxjs/operators';
 })
 export class HomeComponent implements OnInit, OnDestroy {
 
-  private future: Date;
-  private timer$: Observable<number>;
-  private subscription: Subscription;
+  public future: Date;
+  public timer$: Observable<number>;
+  public subscription: Subscription;
 
   public timerInfo = [
     { value: 0, label: 'Days' },

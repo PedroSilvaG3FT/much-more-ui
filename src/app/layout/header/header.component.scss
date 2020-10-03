@@ -1,11 +1,5 @@
 @import '../variables.scss';
 
-.header-style {
-    background: transparent no-repeat top center fixed $color-primary !important;
-    background-size: cover !important;
-    z-index: 10 !important;
-}
-
 .header-container {
     padding-left:  $padding-horizontal;
     padding-right: $padding-horizontal;
@@ -38,6 +32,7 @@
                 margin-right: 48px;
                 text-decoration: none;
                 font-weight: bolder;
+                font-size: 1.2rem;
             }
 
             a:hover {

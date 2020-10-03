@@ -1,13 +1,11 @@
 <div class="header-container">
-    <div class="header-content">
+	<div class="header-content">
+		<img src="assets/images/logo.svg" class="logo-header" />
 
-        <img src="assets/images/logo.svg" class="logo-header">
-        
-        <div id="routes-area">
-            <a *ngFor="let route of routesMenu" [routerLink]="[route.link]">
-                {{route.name}}
-            </a>
-        </div>
-    </div>
+		<div id="routes-area">
+			<ng-container *ngFor="let route of routesMenu">
+				<a *ngIf="route.show" [routerLink]="[route.link]">{{route.name}}</a>
+			</ng-container>
+		</div>
+	</div>
 </div>
-

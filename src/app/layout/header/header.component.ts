@@ -1,4 +1,5 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,22 +9,29 @@ import { Component, HostListener, OnInit } from '@angular/core';
 
 export class HeaderComponent implements OnInit {
   public routesMenu = [
-    { name: 'About Us', link: '/about' },
-    { name: 'Contact Us', link: '/contact' },
+    { name: 'Home', link: '', show: false },
+    { name: 'About Us', link: '/about', show: true },
+    { name: 'Contact Us', link: '/contact', show: true },
   ];
 
-  @HostListener('window:scroll', ['$event'])
-  onWindowScroll(e): void {
-    const element = document.querySelector('.header-container');
+  constructor(private router: Router) {
 
-    if (window.pageYOffset > 11) {
-      element.classList.add('header-style');
-    } else {
-      element.classList.remove('header-style');
-    }
+    router.events.subscribe((routeEvent) => {
+      if (routeEvent instanceof NavigationEnd) {
+        this.validateURL(routeEvent.url);
+      }
+    });
   }
 
-  constructor() { }
+  validateURL(url: string): void {
+    if (url === '/') {
+      this.routesMenu[0].show = false;
+      this.routesMenu[1].show = true;
+    } else {
+      this.routesMenu[0].show = true;
+      this.routesMenu[1].show = false;
+    }
+  }
 
   ngOnInit(): void { }
 
