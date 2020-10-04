@@ -31,12 +31,8 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   initializeTimer(): void {
-    const currentDate = new Date();
-    this.future = new Date(
-      currentDate.getFullYear(),
-      currentDate.getMonth(),
-      currentDate.getDay() - 1,
-    );
+    this.future = new Date();
+    this.future.setDate(this.future.getDate() + 2);
 
     this.timer$ = interval(1000).pipe(map(() => {
       return Math.floor((this.future.getTime() - new Date().getTime()) / 1000);

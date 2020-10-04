@@ -26,7 +26,8 @@ Execute `ng generate component-name` para gerar um novo componente. Você també
 
 ## Resoluções
 - `Maior que 768px`: Desktop
-- `Menor que 768px`: Tablet/Smartphones
+- `De 591px á 768px`: Tablet
+- `Menor que 591px`: Smartphone
 
 ## Rotas e Header
 - São adicionadas em header.component.ts por meio de um array e renderizada no template.
@@ -64,6 +65,20 @@ Ex.:
 * `Buscar`: Espera como parametro uma Key.
 * `Adicionar`: Espera como parametro uma Key + valor (String).
 * `Limpar`: não possui parametros.
+
+
+## Timer 
+- Funciona de forma assincrona pois foi criado usando operadores do `rxjs`.
+- Varrável timer$ é um Observable do tipo number onde armazena o valor atual do timer.
+- Para iniciar o timer é necessário assinar o observável, isso é feito através do `Subscription`.
+- Ao realizar a assinatura a variável timer$ passa a ser monitorada e passa para a validação de uma nova exibição do timer.
+- A visualização no template é controlada por uma variável `timerInfo` do tipo array com o seguinte formato : 
+    public timerInfo = [
+        { value: 0, label: 'Days' },
+        { value: 0, label: 'Hours' },
+        { value: 0, label: 'Minutes' },
+        { value: 0, label: 'Seconds' },
+    ];
 
 ## Considerações gerais
 - Desenvolver um código limpo.
