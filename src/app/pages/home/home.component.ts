@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   public timer$: Observable<number>;
   public subscription: Subscription;
 
-  public timerInfo = [
+  public timerInfo: TimerInfo[] = [
     { value: 0, label: 'Days' },
     { value: 0, label: 'Hours' },
     { value: 0, label: 'Minutes' },
@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.subscription = this.timer$.subscribe((x) => this.timerInfo = this.setNewTimerValue(x));
   }
 
-  setNewTimerValue(counter): any[] {
+  setNewTimerValue(counter): TimerInfo[] | [] {
     if (counter === 0) {
       this.subscription.unsubscribe();
       return [];
@@ -66,4 +66,9 @@ export class HomeComponent implements OnInit, OnDestroy {
     ];
   }
 
+}
+
+export interface TimerInfo {
+  value: number;
+  label: string;
 }
