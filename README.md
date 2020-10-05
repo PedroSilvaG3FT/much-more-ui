@@ -44,7 +44,7 @@ Ex.:
 ## Styles
 - Os Icones são SVGs presentes em assets/icons.
 - Fonte ultilizada: `Roboto`, implantada via `@import url(...)`.
-- Possi como principio containers contendo `display: flex` e `display: grid`.
+- Possi como principio containers possuindo `display: flex` e `display: grid`.
 - Configurações gerais de cores, espaçamentos, bordas devem estar presentes em app/layout/variables.scss,
   esse arquivo contem as variareis SCSS que poderão ser acessadas em outros arquivos.scss via import.
 - Estilos "Globais" que podem ser aproveitados em varias situações, estão presentes em styles.scss;
@@ -73,6 +73,8 @@ Ex.:
 - Para iniciar o timer é necessário assinar o observável, isso é feito através do `Subscription`.
 - Ao realizar a assinatura a variável timer$ passa a ser monitorada e passa para a validação de uma nova exibição do timer.
 - A visualização no template é controlada por uma variável `timerInfo` do tipo array com o seguinte formato : 
+    
+Ex.:
     public timerInfo = [
         { value: 0, label: 'Days' },
         { value: 0, label: 'Hours' },

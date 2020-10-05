@@ -15,6 +15,7 @@ $square-size-mobile: 125px;
 		justify-content: center;
 		flex-direction: column;
 		height: 62vh;
+		width: 100%s;
 
 		.box-text {
 			text-align: center;
@@ -45,10 +46,6 @@ $square-size-mobile: 125px;
 					background-color: $color-primary;
 					left: -145%;
 				}
-			}
-
-			#text-mobile {
-				display: none;
 			}
 		}
 
@@ -96,6 +93,25 @@ $square-size-mobile: 125px;
 						background-color: $color-primary;
 						left: -30%;
 					}
+				}
+			}
+
+			.box-timer {
+				.item-timer {
+					flex: 1;
+					margin: 0px !important
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 320px) { 
+	.home-container {
+		.home-content { 
+			.box-timer {
+				.item-timer {
+					width: 55px;
 				}
 			}
 		}
