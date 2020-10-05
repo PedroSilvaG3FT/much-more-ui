@@ -74,9 +74,10 @@ Ex.:
 - Varrável timer$ é um Observable do tipo number onde armazena o valor atual do timer.
 - Para iniciar o timer é necessário assinar o observável, isso é feito através do `Subscription`.
 - Ao realizar a assinatura a variável timer$ passa a ser monitorada e passa para a validação de uma nova exibição do timer.
-- A visualização no template é controlada por uma variável `timerInfo` do tipo array com o seguinte formato : 
+- A visualização no template é controlada por uma variável `timerInfo` do tipo array com o seguinte formato
     
 Ex.:
+
     public timerInfo = [
         { value: 0, label: 'Days' },
         { value: 0, label: 'Hours' },
