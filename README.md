@@ -28,6 +28,8 @@ Execute `ng generate component-name` para gerar um novo componente. Você també
 - `Maior que 768px`: Desktop
 - `De 591px á 768px`: Tablet
 - `Menor que 591px`: Smartphone
+- Testes de respomsividade devem ser realizados utilizando break points do proprio navegador e simulando diferentes dispositivos
+  desde a menor resolução `iPhone 5 (320x568)` até o desktop.
 
 ## Rotas e Header
 - São adicionadas em header.component.ts por meio de um array e renderizada no template.
