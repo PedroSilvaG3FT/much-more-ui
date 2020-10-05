@@ -1,0 +1,30 @@
+@import '../../layout/variables.scss';
+
+.not-found-container {
+    background: $color-primary;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - #{$header-height});
+
+    img {
+        width: 171px;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+	.not-found-container {
+        background: $bg-mult-color-horizontal;
+    }
+}
+
+@media only screen and (max-width: 591px) {
+	.not-found-container {
+		background: $bg-mult-color-horizontal;
+		padding-top: calc(#{$header-height} + 30px);
+		height: 110vh;
+	}
+}
